@@ -1,8 +1,8 @@
 package main
 
 import (
+	"exercise/src"
 	"fmt"
-	"inverview/src"
 )
 
 func main() {
