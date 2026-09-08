@@ -3,10 +3,10 @@ package src
 // 0904
 import "fmt"
 
-type Node struct {
+type TreeNode struct {
 	Val   int
-	Left  *Node
-	Right *Node
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func TestPostOrder() {
@@ -14,12 +14,12 @@ func TestPostOrder() {
 	res := PostOrder(root)
 	fmt.Println(res)
 }
-func PostOrder(root *Node) []int {
+func PostOrder(root *TreeNode) []int {
 
 	res := []int{}
-	stack := []*Node{}
+	stack := []*TreeNode{}
 	stack = append(stack, root)
-	prev := &Node{}
+	prev := &TreeNode{}
 	for len(stack) > 0 {
 		cur := stack[len(stack)-1]
 		//pop

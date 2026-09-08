@@ -7,15 +7,15 @@ func TestInitSearchTree() {
 	fmt.Println(root.Val)
 }
 
-func InitSearchTree() *Node {
+func InitSearchTree() *TreeNode {
 	nums := []int{1, 2, 3, 4, 5, 6, 7}
-	var init func(nums []int, left, right int) *Node
-	init = func(nums []int, left, right int) *Node {
+	var init func(nums []int, left, right int) *TreeNode
+	init = func(nums []int, left, right int) *TreeNode {
 		if left > right {
 			return nil
 		}
 		mid := (left + right) / 2
-		root := &Node{
+		root := &TreeNode{
 			Val: nums[mid],
 		}
 		root.Left = init(nums, left, mid-1)
